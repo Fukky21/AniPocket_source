@@ -77,6 +77,7 @@ class SettingThemeViewController: UIViewController {
                                             height: view.frame.height - mainLabel.frame.maxY - 130))
         themeTV.delegate = self
         themeTV.dataSource = self
+        themeTV.backgroundColor = .white
         themeTV.tableFooterView = UIView(frame: .zero)
         themeTV.allowsMultipleSelection = false
         
@@ -158,6 +159,7 @@ extension SettingThemeViewController: UITableViewDelegate, UITableViewDataSource
         let cell = UITableViewCell(style: .default, reuseIdentifier: "Cell")
         cell.textLabel?.text = themes[indexPath.item]
         cell.textLabel?.textColor = .black
+        cell.backgroundColor = .white
         cell.selectionStyle = .none
         
         if indexPath.item == selectedCell {

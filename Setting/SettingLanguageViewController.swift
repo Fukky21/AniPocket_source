@@ -63,6 +63,7 @@ class SettingLanguageViewController: UIViewController {
                                            height: view.frame.height - mainLabel.frame.maxY - 130))
         langTV.delegate = self
         langTV.dataSource = self
+        langTV.backgroundColor = .white
         langTV.tableFooterView = UIView(frame: .zero)
         langTV.allowsMultipleSelection = false
         
@@ -125,6 +126,7 @@ extension SettingLanguageViewController: UITableViewDelegate, UITableViewDataSou
         let cell = UITableViewCell(style: .default, reuseIdentifier: "Cell")
         cell.textLabel?.text = languages[indexPath.item]
         cell.textLabel?.textColor = .black
+        cell.backgroundColor = .white
         cell.selectionStyle = .none
         
         if indexPath.item == selectedCell {

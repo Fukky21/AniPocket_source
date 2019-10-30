@@ -42,11 +42,26 @@ class CustomNavigationController: UINavigationController {
         
         switch Theme.themeName {
             case "simple":
-                UIApplication.shared.statusBarStyle = .default
+                if #available(iOS 13.0, *) {
+                    UIApplication.shared.statusBarStyle = .darkContent
+                } else {
+                    // Fallback on earlier versions
+                    UIApplication.shared.statusBarStyle = .default
+                }
             case "lovely-candy":
-                UIApplication.shared.statusBarStyle = .default
+                if #available(iOS 13.0, *) {
+                    UIApplication.shared.statusBarStyle = .darkContent
+                } else {
+                    // Fallback on earlier versions
+                    UIApplication.shared.statusBarStyle = .default
+                }
             case "happy-bitter":
-                UIApplication.shared.statusBarStyle = .default
+                if #available(iOS 13.0, *) {
+                    UIApplication.shared.statusBarStyle = .darkContent
+                } else {
+                    // Fallback on earlier versions
+                    UIApplication.shared.statusBarStyle = .default
+                }
             case "nature":
                 UIApplication.shared.statusBarStyle = .lightContent
             case "rock-mode":
@@ -54,7 +69,12 @@ class CustomNavigationController: UINavigationController {
             case "deep-ocean":
                 UIApplication.shared.statusBarStyle = .lightContent
             case "ice":
-                UIApplication.shared.statusBarStyle = .default
+                if #available(iOS 13.0, *) {
+                    UIApplication.shared.statusBarStyle = .darkContent
+                } else {
+                    // Fallback on earlier versions
+                    UIApplication.shared.statusBarStyle = .default
+                }
             case "sunset":
                 UIApplication.shared.statusBarStyle = .lightContent
             default:
